@@ -7,6 +7,8 @@ const forecast = require('./utils/forecast')
 
 // express is a function and we call it to crea a new express application
 const app = express()
+// this is for heroku
+const port = process.env.PORT || 3000
 
 
 // Define path for Express config
@@ -136,6 +138,6 @@ app.get('*', (req, res)=>{
 // starts the server
 // the port is the first arg
 // second arg -> callback function that runs when the server is up and running
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000')
+app.listen(port, ()=>{
+    console.log(`Server is on port ${port}`)
 })

@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (event)=>{
     messageTwo.textContent = ''
     
     // fetch json data from a url, parse it into a js object and then do something with it (in this case, console.log(data))
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response)=>{
+    fetch(`/weather?address=${location}`).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 messageOne.textContent = data.error
