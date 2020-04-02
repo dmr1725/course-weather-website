@@ -57,7 +57,7 @@ app.get('/about', (req,res)=>{
 
 app.get('/help', (req, res)=>{
     res.render('help', {
-        msg: 'Tienes que volver a repasar todo esto',
+        msg: 'There is no help. Te jodiste ',
         title: 'Help',
         name: 'Diego Mendez'
     })
